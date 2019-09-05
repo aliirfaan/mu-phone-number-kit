@@ -7,7 +7,7 @@
 *  @author aliirfaan
 */
 
-namespace Aliirfaan\PhoneNumberKit\MobileNumberKit;
+namespace Aliirfaan\PhoneNumberKit;
 
 class MobileNumberKit
 {
