@@ -46,8 +46,8 @@ class MobileNumberKit
      * Converts a valid local mobile number to international format
      *
      * @param int|string $inputNumber Valid mobile number in local format without any spaces
-     * @param int|string $internationalCode International code
      * @param string $prefix Character(s) to add before international code
+     * @param int|string $internationalCode International code
      * @return string Mobile number in international format
      */
     public function internationalizeMobileNumber($inputNumber, $prefix = '+', $internationalCode = '230')
