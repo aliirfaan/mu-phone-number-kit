@@ -19,7 +19,7 @@ $ composer require aliirfaan/mu-phone-number-kit
 
 require 'vendor/autoload.php';
 
-use Aliirfaan\IdentityKit\MobileNumberKit;
+use Aliirfaan\PhoneNumberKit\MobileNumberKit;
 
 // instantiate class
 $mobileNumberKit = new MobileNumberKit();
