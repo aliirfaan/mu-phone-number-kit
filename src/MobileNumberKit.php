@@ -66,4 +66,16 @@ class MobileNumberKit
         $inputNumberLength = strlen($inputNumber);
         return substr($inputNumber, $inputNumberLength - 8, 8);
     }
+    
+    /**
+     * Removes all charactes except numbers from mobile number
+     *
+     * @param int|string $inputNumber Mobile number to clean
+     *
+     * @return void
+     */
+    public function cleanMobileNumber($inputNumber) 
+    {
+        return preg_replace('/[^0-9]/', '', $inputNumber);
+    }
 }

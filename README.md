@@ -2,6 +2,7 @@
 PHP library for formatting and validating phone numbers.
 
 ## Features
+- Clean mobile phone numbers by removing unwanted characters
 - Validate and format local mobile phone numbers
 
 ## Installation
