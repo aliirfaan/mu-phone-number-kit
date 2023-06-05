@@ -15,14 +15,15 @@ class MobileNumberKit
      * Validates a mobile number without spaces against local format using regex
      *
      * Starts with 5
-     * Followed by 7 digits
+     * Followed by 2|4|5|7|8|9
+     * Followed by 6 digits
      *
      * @param int|string $inputNumber Mobile number without any spaces
      * @return bool
      */
     public function isValidLocalMobileNumberFormat($inputNumber)
     {
-        $regex = '/^5\d{7}$/';
+        $regex = '/^5(2|4|5|7|8|9)\d{6}$/';
         return preg_match($regex, $inputNumber);
     }
 
@@ -30,15 +31,31 @@ class MobileNumberKit
      * Validates a mobile number without spaces against international format using regex
      *
      * Starts with +230 or 00230 or 230
-     * Followed by 5
-     * Followed by 7 digits
+     * Followed by 2|4|5|7|8|9
+     * Followed by 6 digits
      *
      * @param int|string $inputNumber Mobile number without any spaces
      * @return bool
      */
     public function isValidInternationalMobileNumberFormat($inputNumber)
     {
-        $regex = '/^(\+|00)?2305\d{7}$/';
+        $regex = '/^(\+|00)?2305(2|4|5|7|8|9)\d{6}$/';
+        return preg_match($regex, $inputNumber);
+    }
+
+    /**
+     * Validates a mobile number without spaces against both local and international format using regex
+     *
+     * May start with +230 or 00230 or 230
+     * Followed by 2|4|5|7|8|9
+     * Followed by 6 digits
+     *
+     * @param int|string $inputNumber Mobile number without any spaces
+     * @return bool
+     */
+    public function isValidLocalOrInternationalMobileNumberFormat($inputNumber)
+    {
+        $regex = '/^(\+|00)?(230)?5(2|4|5|7|8|9)\d{6}$/';
         return preg_match($regex, $inputNumber);
     }
 
