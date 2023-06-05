@@ -74,8 +74,21 @@ class MobileNumberKit
      *
      * @return void
      */
-    public function cleanMobileNumber($inputNumber) 
+    public function cleanMobileNumber($inputNumber)
     {
         return preg_replace('/[^0-9]/', '', $inputNumber);
+    }
+
+    /**
+     * Masks valid MU mobile phone number using a mask character
+     *
+     * @param int|string $inputNumber Mobile number to clean
+     * @param string $maskCharacter mask character
+     *
+     * @return void
+     */
+    public function maskMobileNumber($inputNumber, $maskCharacter = '*')
+    {
+        return substr($inputNumber, 0, 2) . str_repeat($maskCharacter, 3) . substr($inputNumber, -3);
     }
 }
