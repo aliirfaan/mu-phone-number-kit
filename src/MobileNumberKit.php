@@ -108,4 +108,22 @@ class MobileNumberKit
     {
         return substr($inputNumber, 0, 2) . str_repeat($maskCharacter, 3) . substr($inputNumber, -3);
     }
+    
+    /**
+     * Converts a valid local mobile number to ITU E123 format
+     * The number consists of:
+     * '+'
+     * country code (1, 2 or 3 digits)
+     * 'space'
+     * national number ( which may embed single spaces characters fo readability).
+     *
+     * @param int|string $inputNumber Valid mobile number in local format without any spaces
+     * @param string $prefix Character(s) to add before international code
+     * @param int|string $internationalCode International code
+     * @return string Mobile number in international format
+     */
+    public function formatMobileNumberITUE123($inputNumber, $prefix = '+', $internationalCode = '230')
+    {
+        return $prefix . $internationalCode . ' ' . $inputNumber;
+    }
 }
