@@ -126,4 +126,21 @@ class MobileNumberKit
     {
         return $prefix . $internationalCode . ' ' . $inputNumber;
     }
+
+    /**
+     * Converts a valid local mobile number to ITU-T E.164 presentation.
+     *
+     * E.164 numbers are a contiguous string of digits (max 15) comprising country code plus
+     * national significant number, often shown with a leading plus sign — no spaces or other
+     * separators. Output is prefix + country calling code + national number with no space.
+     *
+     * @param int|string $inputNumber Valid mobile number in local format without any spaces
+     * @param string $prefix Character(s) to add before country calling code (e.g. '+')
+     * @param int|string $internationalCode Country calling code without leading '+' (e.g. '230')
+     * @return string E.164-style string, e.g. '+23057501234'
+     */
+    public function formatMobileNumberITUET164($inputNumber, $prefix = '+', $internationalCode = '230')
+    {
+        return $prefix . $internationalCode . $inputNumber;
+    }
 }
