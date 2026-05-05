@@ -3,6 +3,28 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com) and this project adheres to [Semantic Versioning](https://semver.org).
 
+## 3.2.1 - 2026-05-05
+
+### Added
+
+- Nothing
+
+### Changed
+
+- Nothing
+
+### Deprecated
+
+- Nothing
+
+### Removed
+
+- nothing
+
+### Fixed
+
+- CRLF injection fix - phpunit to ^13.1.6
+
 ## 3.2.0 - 2026-04-29
 
 ### Added
