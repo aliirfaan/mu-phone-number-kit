@@ -89,7 +89,7 @@ class MobileNumberKit
      *
      * @param int|string $inputNumber Mobile number to clean
      *
-     * @return void
+     * @return string
      */
     public function cleanMobileNumber($inputNumber)
     {
@@ -102,7 +102,7 @@ class MobileNumberKit
      * @param int|string $inputNumber Mobile number to clean
      * @param string $maskCharacter mask character
      *
-     * @return void
+     * @return string
      */
     public function maskMobileNumber($inputNumber, $maskCharacter = '*')
     {
